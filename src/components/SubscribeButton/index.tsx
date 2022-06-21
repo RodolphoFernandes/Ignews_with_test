@@ -9,7 +9,7 @@ interface SubscribeButtonProps {
 }
 
 export function SubscribeButton({ priceId }: SubscribeButtonProps) {
-    const [session] = useSession();
+    const [session] : any = useSession();
     const router = useRouter()
 
 
@@ -22,7 +22,7 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
 
 
 
-        if (session.activeSubscription) {
+        if (session?.activeSubscription) {
             router.push('/posts');
             return;
         }
